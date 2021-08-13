@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Emp } from './emp';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'emp-form';
+  
+  empModel = new Emp('', '', 0, '', '', '', '', '', 0);
+
+  onSubmit(){
+    console.log(this.empModel);
+  }
 }
